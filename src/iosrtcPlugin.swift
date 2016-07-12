@@ -623,7 +623,7 @@ class iosrtcPlugin : CDVPlugin {
         let id = command.argumentAtIndex(0) as! Int
         
         let pluginMediaStreamRenderer = PluginMediaStreamRenderer(
-            webView: self.webView!,
+            webView: self.webView! as! UIWebView,
             eventListener: { (data: NSDictionary) -> Void in
                 let result = CDVPluginResult(status: CDVCommandStatus_OK, messageAsDictionary: data as [NSObject : AnyObject])
                 
